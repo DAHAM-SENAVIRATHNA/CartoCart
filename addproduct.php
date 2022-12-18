@@ -51,7 +51,7 @@
 		// servername => localhost
 		// username => root
 		// password => empty
-		// database name => staff
+		
         $db_name = "shopping";
 		$conn = mysqli_connect("localhost", "root", "", "$db_name");
 		

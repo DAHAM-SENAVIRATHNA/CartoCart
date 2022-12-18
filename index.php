@@ -1,9 +1,7 @@
+
 <?php
     include 'dbconnection.php';
-    include 'addproducts.php';
-  
-    
-
+   
 
     if(isset($_POST["add"])){
         if(isset($_SESSION["shopping_cart"])){
@@ -61,7 +59,11 @@
             margin: 2px 5px 10px 2px;
             padding: 10px;
             text-align: center;
-            background-color: #d3eaf2;
+            background-color: #F9F3DC;
+            border-style: solid;
+            border-width: 1px 1px;
+            border-color:  #0D4C70;
+            border-radius: 20px;
         }
         table,th,tr{
               text-align: center;
@@ -105,7 +107,7 @@
                                 <input type="text" name="quantity" class="form-control" value="1">
                                 <input type="hidden" name="hidden_name" value="<?php echo $row["description"];?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
-                                <input type="submit" name="add" style="margin-top: 8px; color: white;" class="btn btn-success" value="Add to cart">
+                                <button type="button" class="btn btn-primary btn-md">Add to cart</button>
                             </div>
                         </form>
                     </div>

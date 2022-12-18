@@ -20,21 +20,30 @@
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con, $password);
         $create_datetime = date("Y-m-d H:i:s");
+        $repass = stripslashes($_REQUEST['repass']);
+        $repass = mysqli_real_escape_string($con, $repass);
+        
+      			
+      if($password!=$repass) {
+          echo "<div class='form'>
+          <h3>Mismatch Password.</h3><br/>
+          <h3>Try again Registration with the Re-type same password.</h3><br/>
+          </div>";
+      }else{
         $query    = "INSERT into `users` (firstname, lastname,  password, email, create_datetime)
                      VALUES ('$firstname', '$lastname', '" . md5($password) . "', '$email', '$create_datetime')";
         $result   = mysqli_query($con, $query);
 
-            if ($result) {
+      }
+      
+      
+
+       if ($result) {
             echo "<div class='form'>
                   <h3>You are registered successfully.</h3><br/>
                   <p class='link'>Click here to <a href='login.php'>Login</a></p>
                   </div>";
-        } else {
-            echo "<div class='form'>
-                  <h3>Required fields are missing.</h3><br/>
-                  <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
-                  </div>";
-        }
+        } 
     } else {
 ?>
     
@@ -99,7 +108,7 @@
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" name="cpass" class="form-control" />
+                <input type="password" name="repass" class="form-control" />
                 <label class="form-label" for="form3Example4">Re-enter Password</label>
               </div>
 

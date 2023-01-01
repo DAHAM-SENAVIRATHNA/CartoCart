@@ -1,0 +1,30 @@
+
+    .product{
+        border: 2px solid #757579;
+        margin: 1px 5px 10px 1px;
+        padding: 10px;
+        text-align: center;
+        background-color: #dbdfe0;
+        border-radius: 20px;
+    }
+    table,th,tr{
+          text-align: center;
+    }
+    .title2{
+        text-align: center;
+        color: #F8F9F9;
+        background-color: #9925be;
+        padding: 1%;
+        
+    }
+    h2{
+        text-align: center;
+        color: #141616;
+        background-color: #dfac5f;
+        padding: 0.5%;
+    }
+    table th{
+        background-color: #d3eaf2
+    }
+
+   

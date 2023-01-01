@@ -1,7 +1,6 @@
-
 <?php
+    include '../includes/header.html';
     include 'dbconnection.php';
-   
 
     if(isset($_POST["add"])){
         if(isset($_SESSION["shopping_cart"])){
@@ -52,46 +51,18 @@
     <title>Shopping Cart</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <style>
 
-        .product{
-            border: 1px solid #eaeaec;
-            margin: 2px 5px 10px 2px;
-            padding: 10px;
-            text-align: center;
-            background-color: #F9F3DC;
-            border-style: solid;
-            border-width: 1px 1px;
-            border-color:  #0D4C70;
-            border-radius: 20px;
-        }
-        table,th,tr{
-              text-align: center;
-        }
-        .title2{
-            text-align: center;
-            color: #F8F9F9;
-            background-color: #9925be;
-            padding: 2%;
-            
-        }
-        h2{
-            text-align: center;
-            color: #F8F9F9;
-            background-color: #9925be;
-            padding: 2%;
-        }
-        table th{
-            background-color: #d3eaf2
-        }
+<link rel= "stylesheet" href= "../css/dashboard.css" >
 
-       
-       
-    </style>
+        
 </head>
 <body>
+<body>
+   
+
+    <h2>Online Store</h2>
     <div class="container" style="width: 100%">
-        <h2>Online Store</h2>
+        
         <?php
             $query = "select * from product order by id asc";
             $result = mysqli_query($connection,$query);
@@ -107,7 +78,7 @@
                                 <input type="text" name="quantity" class="form-control" value="1">
                                 <input type="hidden" name="hidden_name" value="<?php echo $row["description"];?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
-                                <button type="button" class="btn btn-primary btn-md">Add to cart</button>
+                                <input type="submit" name="add" style="margin-top: 8px; color: white;" class="btn btn-success" value="Add to cart">
                             </div>
                         </form>
                     </div>
@@ -153,7 +124,6 @@
                 ?>
             </table>
         </div>
-        
 
     </div>
 </body>

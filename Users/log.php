@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Login</title>
+    <title>Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -18,6 +18,7 @@
         $email = mysqli_real_escape_string($con, $email);
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con, $password);
+        
         // Check user is exist in the database
      
         $query    = "SELECT * FROM `users` WHERE email='$email'
@@ -25,13 +26,22 @@
         $result = mysqli_query($con, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
 
-
-         
+    
         if ($rows == 1) {
+          if ($email == 'admin@gmail.com'){
+            header("Location: admin.php");
+            
+          }
+          
+          else{
             $_SESSION['email'] = $email;
-            // Redirect to user dashboard page
+          // Redirect to user dashboard page
             header("Location: main.php");
+          }
         }
+
+        
+      
     
         else {
             echo "<div class='form'>

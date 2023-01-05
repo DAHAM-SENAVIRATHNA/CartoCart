@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2022 at 05:27 AM
+-- Generation Time: Jan 05, 2023 at 05:55 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -50,7 +50,16 @@ INSERT INTO `product` (`id`, `description`, `image`, `price`) VALUES
 (9, 'Key Holder\r\n', 'https://i.dummyjson.com/data/products/30/thumbnail.jpg', 30),
 (10, 'cereals muesli fruit nuts', 'https://i.dummyjson.com/data/products/24/thumbnail.jpg', 46),
 (11, '3D Embellishment Art Lamp', 'https://i.dummyjson.com/data/products/28/thumbnail.jpg', 20),
-(12, 'Flying Wooden Bird', 'https://i.dummyjson.com/data/products/27/thumbnail.webp', 51);
+(12, 'Flying Wooden Bird', 'https://i.dummyjson.com/data/products/27/thumbnail.webp', 51),
+(13, 'Microsoft Surface Laptop 4', 'https://i.dummyjson.com/data/products/8/thumbnail.jpg', 1499),
+(14, 'Infinix INBOOK', 'https://i.dummyjson.com/data/products/9/thumbnail.jpg', 1099),
+(15, 'Brown Perfume', 'https://i.dummyjson.com/data/products/12/thumbnail.jpg', 40),
+(16, 'Gulab Powder 50 Gram', 'https://i.dummyjson.com/data/products/25/thumbnail.jpg', 70),
+(17, 'Eau De Perfume Spray', 'https://i.dummyjson.com/data/products/15/thumbnail.jpg', 30),
+(18, 'Freckle Treatment Cream- 15gm', 'https://i.dummyjson.com/data/products/20/thumbnail.jpg', 15),
+(19, 'Elbow Macaroni - 400 gm', 'https://i.dummyjson.com/data/products/22/thumbnail.jpg', 14),
+(20, 'Orange Essence Food Flavou', 'https://i.dummyjson.com/data/products/23/thumbnail.jpg', 14),
+(21, 'cereals muesli fruit nut', 'https://i.dummyjson.com/data/products/24/thumbnail.jpg', 46);
 
 --
 -- Indexes for dumped tables
@@ -70,7 +79,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

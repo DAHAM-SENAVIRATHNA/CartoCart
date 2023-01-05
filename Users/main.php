@@ -47,7 +47,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>User Dashboard</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
@@ -60,8 +60,30 @@
             letter-spacing: 3px;
             text-align: justify;
         }
+        
+        .btn_cart {
+            border: none;
+            outline: 0;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 15px;
+            }
+            .product{
+                border: 1px solid #ffe3e3;
+                margin: 1px 5px 10px 1px;
+                padding: 10px;
+                text-align: center;
+                background-color: #f0f0f0;
+                border-radius: 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
       
-    </style>
+</style>
 
         
 </head>
@@ -99,11 +121,11 @@
                             <div class="product">
                                 <img src="<?php echo $row["image"];?>" width="290px" height="300px" class="img-responsive">
                                 <h5 class="text-info"><?php echo $row["description"];?></h5>
-                                <h5 class="text-danger"><?php echo $row["price"];?></h5>
+                                <h5 class="text-danger">$<?php echo $row["price"];?></h5>
                                 <input type="text" name="quantity" class="form-control" value="1">
                                 <input type="hidden" name="hidden_name" value="<?php echo $row["description"];?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"];?>">
-                                <input type="submit" name="add" style="margin-top: 8px; color: white;" class="btn btn-success" value="Add to cart">
+                                <input type="submit" name="add" class="btn_cart" value="Add to cart">
                             </div>
                         </form>
                     </div>
@@ -133,7 +155,7 @@
                         <td><?php echo $value["product_quantity"];?></td>
                         <td><?php echo $value["product_price"];?></td>
                         <td><?php echo number_format($value["product_quantity"]*$value["product_price"],2);?></td>
-                        <td><a href="main.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span class="text-danger">Remove Item</span></a></td>
+                        <td><a href="main.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span class="btn btn-danger">Remove</span></a></td>
                 </tr>
                 <?php
                     $total = $total + ($value["product_quantity"]*$value["product_price"]);

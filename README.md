@@ -12,7 +12,7 @@ This project is a PHP, MySQL, and Bootstrap-based e-commerce web application. Us
 
 
 ## SignUp Page
-![Signuppage](https://github.com/DAHAM-SENAVIRATHNA/CartoCart/assets/101781033/2b4d4cc0-488f-428b-86db-4697c74ef69f)
+![Signuppage](https://github.com/DAHAM-SENAVIRATHNA/CartoCart/assets/101781033/0ecd50a0-3b7c-4098-a3d2-529281a42aa2)
 
 ## Login Page
 ![Loginpage](https://github.com/DAHAM-SENAVIRATHNA/CartoCart/assets/101781033/54e843ea-4bf0-49c7-8abe-7d9d50d41d71)

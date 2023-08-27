@@ -27,5 +27,6 @@ This project is a PHP, MySQL, and Bootstrap-based e-commerce web application. Us
 ![admin dash1](https://github.com/DAHAM-SENAVIRATHNA/CartoCart/assets/101781033/1b981c80-bc04-497f-9a53-0a52fb2bf719)
 
 ## Admin Dashboard | Add Products
+![admin dash 2](https://github.com/DAHAM-SENAVIRATHNA/CartoCart/assets/101781033/4d0734aa-a983-4e3d-b7c3-78615b260c74)
 
 
